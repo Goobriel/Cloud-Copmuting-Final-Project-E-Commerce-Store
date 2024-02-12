@@ -12,7 +12,7 @@ div {
 
 /***  Navigation  Bar  ***/
 .topnav {
-    background-color: #333;
+    background-color: purple;
     overflow: hidden;
 }
 
@@ -70,8 +70,11 @@ div {
     color: darkgrey;
 }
 
-.footy {
-    color: blue;
+.FOOT {
+    color: darkgrey;
 }
 
+.FOOT .nav-link {
+    color: darkgrey;
+}
 /*************************/
