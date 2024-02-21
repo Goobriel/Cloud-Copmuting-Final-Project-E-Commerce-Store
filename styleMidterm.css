@@ -1,8 +1,14 @@
 
 
-/*************************/
+
+/********************************/
+/*                              */
+/* CHANGE IMAGE LINKS TO BLACK  */
+/*                              */
+/********************************/
 body{
-    background: rgb(0, 0, 0);
+    font-family: Haettenschweile;
+    background: white;
 }
 
 /*************************/
@@ -11,12 +17,12 @@ div {
 }
 
 /***  Navigation  Bar  ***/
-.topnav {
-    background-color: purple;
+.navbar {
+    background-color: black;
     overflow: hidden;
 }
 
-.topnav ul{
+.navbar ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -24,9 +30,9 @@ div {
     background-color: black;
 }
 
-.topnav a{
+.navbar a{
     float: left;
-    color: #f04a38;
+    color: white;
     text-align:start;
     margin: 5px 4px;
     padding: 10px 15px;
@@ -34,21 +40,33 @@ div {
     font-size: 16px;
 }
 
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
+.navbar a:hover {
+    text-decoration: underline;
+    background-color: black;
+    color: white;
 }
 
-.topnav a.split {
+.navbar .btn {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.navbar a.split {
     float: right;
 }
 
-.topnav i {
+.nav a.left{
+    float: left;
+}
+
+.navbar i {
     padding: 1px 1px;
 }
 
 
-.topnav form {
+.navbar form {
     padding: 7px 15px;
 }
 
@@ -59,11 +77,37 @@ div {
     margin-right: auto;
     margin-left: auto;
 }
+/* Style the button and place it in the middle of the container/image */
+.img-overlay .btn {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .img-overlay .btn:hover {
+    background-color: black;
+  }
+
 
 /*****   Heading   *****/
 .Heading {
     text-align: center;
-    color: #f04a38;
+    color: black;
+    font-family: onyx;
+}
+
+.gallery h3 {
+    text-align: center;
+    color: black;
 }
 
 /*******   Card   *******/
@@ -72,8 +116,9 @@ div {
 }
 
 .card {
-    background-color: black;
+    background-color: white;
     color: darkgrey;
+    border: 0;
 }
 
 .FOOT {
@@ -86,6 +131,11 @@ div {
 
 .FOOT .nav-link {
     color: darkgrey;
+}
+
+.FOOT .btn {
+    color: white;
+    background: #000;
 }
 /*************************/
 
