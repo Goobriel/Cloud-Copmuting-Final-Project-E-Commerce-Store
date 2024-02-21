@@ -9,14 +9,33 @@ document.getElementById('btn-submit').addEventListener('click', function() {
     let subj = document.getElementById('Subject').value.trim();
     let mes = document.getElementById('Contact-Message').value.trim();
 
-    let check = mail.includes("@");
-
+    let at = mail.includes("@");
+    let end = mail.includes(".com");
     if (name.length === 0 || num.length === 0 || mail.length === 0 || subj.length === 0 || mes.length === 0) {
         alert("Please fill in all fields.");
-    } else if (check != true) {
+    } else if (at != true || end != true) {
         alert("Please enter a valid Email.");
     }
     else {
-        alert("Message Submitted");
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+        `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+        `   <div>${message}</div>`,
+        '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+        '</div>'
+        ].join('')
+    
+        alertPlaceholder.append(wrapper)
+        }
+  
+        const alertTrigger = document.getElementById('btn-submit')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+            appendAlert('Message successfully submitted! We will do our best to respond within 1 business day.', 'dark')
+            })
+        }
     }
-});
+})
+
