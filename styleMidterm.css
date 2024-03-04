@@ -3,16 +3,39 @@
 
 /*****************************************/
 /*                                       */
-/* CHANGE IMAGE LINKS TO BLACK           */
+/* CHANGE IMAGE LINKS TO #000           */
 /*                                       */
 /*Contact us body font to Haettenschweile*/
 /*                                       */
 /*                                       */
 /*****************************************/
+
+/*   body   */
 body{
     font-family: Haettenschweile;
-    background: white;
+    background: #FFF;
 }
+
+body p {
+    color: #000;
+}
+
+body .btn {
+    border-color: #FFF;
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+body .btn:hover {
+    border-color: #000;
+    background-color: #FFF;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
 
 /*************************/
 div {
@@ -21,21 +44,20 @@ div {
 
 /***  Navigation  Bar  ***/
 .navbar {
-    background-color: black;
+    background-color: #000;
     overflow: hidden;
 }
 
 .navbar ul{
-    list-style-type: none;
     margin: 0;
     padding: 0;
     width: 60px;
-    background-color: black;
+    background-color: #000;
 }
 
 .navbar a{
     float: left;
-    color: white;
+    color: #FFF;
     text-align:start;
     margin: 5px 4px;
     padding: 10px 15px;
@@ -45,23 +67,15 @@ div {
 
 .navbar a:hover {
     text-decoration: underline;
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #FFF;
 }
 
 .navbar .btn {
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #FFF;
     cursor: pointer;
     border-radius: 5px;
-}
-
-.navbar a.split {
-    float: right;
-}
-
-.nav a.left{
-    float: left;
 }
 
 .navbar i {
@@ -69,9 +83,6 @@ div {
 }
 
 
-.navbar form {
-    padding: 7px 15px;
-}
 
 /*****   Carousel   *****/
 #carouselExampleInterval img{
@@ -87,8 +98,8 @@ div {
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #FFF;
     font-size: 16px;
     padding: 12px 24px;
     border: none;
@@ -97,32 +108,56 @@ div {
   }
   
   .img-overlay .btn:hover {
-    background-color: black;
+    background-color: #FFF;
+    color: #000;
   }
 
 
 /*****   Heading   *****/
 .Heading {
-    text-align: center;
-    color: black;
     font-family: onyx;
+    text-align: center;
+    color: #000;
+}
+
+.Heading .btn{
+    border-color: #000;
+    background-color: #FFF;
+    color: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.Heading .btn:hover {
+    border-color: #FFF;
+    border-color: #FFF;
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .gallery h3 {
     text-align: center;
-    color: black;
+    color: #000;
 }
 
 /*******   Card   *******/
-.card:hover {
-    opacity: .7;
-}
-
 .card {
-    background-color: white;
+    background-color: #FFF;
     color: darkgrey;
     border: 0;
 }
+
+.card .card-img-top:hover {
+    opacity: .7;
+}
+
+.card .card-link {
+    text-align: center;
+    color: #000;
+}
+
 
 .FOOT {
     color: darkgrey;
@@ -137,7 +172,7 @@ div {
 }
 
 .FOOT .btn {
-    color: white;
+    color: #FFF;
     background: #000;
 }
 /*************************/
@@ -146,6 +181,6 @@ div {
 /*********************************       CONTACT US HTML DOC       **************************************/
 
 .contact_Form {
-    color: white;
+    color: #FFF;
 
 }
