@@ -17,7 +17,50 @@
  
    <!--------------------------------       -Navigation Bar Begins      -------------------------------------------------------->
 
-   <nav class="navbar navbar-expand-lg bg-body-tertiary-dark">
+<!--
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">InsperShirt</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="MidTerm Project.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="MidtTerm Contact Us.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutUs.html">About Us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+-->
+   <!--Accounts and Sign In: My Accounts, Order Status, Sign In-->
+   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="MidTerm Project.html"><strong>InsperShirt</strong></a>
             <a class="" href="MidTerm Project.html"> Home</a>
@@ -43,9 +86,31 @@
             <a class=""><button type="button" class="btn" id="cart-icon"><i class="bi bi-cart4"></i></button></a>
         </div>
     </nav>
-   
+  
     <!--------------------------------       -Navigation Bar ENDS      -------------------------------------------------------->
-    
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
     <!--------------------------------         -CART BEGINS        -------------------------------------------------------->
     <div class="card shopping-cart" id="close" style="display: none;">
         <div class="row">
@@ -119,7 +184,7 @@
         </div>
         
     </div>
-    <!--------------------------------         -Carousel BEGINS        -------------------------------------------------------->
+    <!--------------------------------         -Carousel ENDS          -------------------------------------------------------->
 
 
     <!--------------------------------         -Carousel BEGINS        -------------------------------------------------------->
@@ -169,8 +234,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/Gallery/Honey.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title">Honey</h5>
-                            <p class="card-text">"Gracious words are like..." Inspired by Proverbs 16:24</p>
+                                <h5 class="card-title">Honey</h5>
+                                <p class="card-text">"Gracious words are like..." Inspired by Proverbs 16:24</p>
+                                <div id="price1">$12.00</div>    
                             </div>
                             <div class="card-body">
                             <a href="#" class="card-link" id="cat">Add to Cart</a>
@@ -184,6 +250,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Finish the Race</h5>
                                 <p class="card-text">Finish the race of life well. Inspired by Hebrews 12:1</p>
+                                <div id="price2">$12.00</div> 
                             </div>
                             <div class="card-body">
                             <a href="#" class="card-link" id="panda">Add to Cart</a>
@@ -195,8 +262,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/Gallery/HebrewsRacing2.jpeg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title">Finish the Race</h5>
-                            <p class="card-text">Finish the race of life well. Inspired by Hebrews 12:1</p>
+                                <h5 class="card-title">Finish the Race</h5>
+                                <p class="card-text">Finish the race of life well. Inspired by Hebrews 12:1</p>
+                                <div id="price3">$12.00</div> 
                             </div>
                             <div class="card-body">
                             <a href="#" class="card-link" id="smile">Add to Cart</a>
@@ -208,8 +276,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/Gallery/GoodNews.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title">Have You Found Him?</h5>
-                            <p class="card-text">Good news exclusive! Shirt inspired by Jeremiah 29:13.</p>
+                                <h5 class="card-title">Have You Found Him?</h5>
+                                <p class="card-text">Good news exclusive! Shirt inspired by Jeremiah 29:13.</p>
+                                <div id="price4">$12.00</div> 
                             </div>
                             <div class="card-body">
                             <a href="#" class="card-link" id="samurai">Add to Cart</a>
@@ -233,8 +302,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/coolPandaPic1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title">Cool Panda</h5>
-                            <p class="card-text">Coolest Panda around. Party Animal!</p>
+                                <h5 class="card-title">Cool Panda</h5>
+                                <p class="card-text">Coolest Panda around. Party Animal!</p>
+                                <div id="price5">$12.00</div> 
                             </div>
                             <div class="card-body">
                             <a href="#" class="card-link" id="panda">Add to Cart</a>
@@ -246,8 +316,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img\spaceCatPic1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title">Space Cat</h5>
-                            <p class="card-text">Explored over half the universe and only on his 2nd life.</p>
+                                <h5 class="card-title">Space Cat</h5>
+                                <p class="card-text">Explored over half the universe and only on his 2nd life.</p>
+                                <div id="price6">$12.00</div> 
                             </div>
                             <div class="card-body">
                             <a href="#" class="card-link" id="cat">Add to Cart</a>
@@ -259,8 +330,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/Evil Samurai Pic.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title">Samurai</h5>
-                            <p class="card-text">Sharpest blade in the east. No foe has lived to tell the tale.</p>
+                                <h5 class="card-title">Samurai</h5>
+                                <p class="card-text">Sharpest blade in the east. No foe has lived to tell the tale.</p>
+                                <div id="price7">$12.00</div>     
                             </div>
                             <div class="card-body">
                             <a href="#" class="card-link" id="samurai">Add to Cart</a>
@@ -272,8 +344,9 @@
                         <div class="card" style="width: 18rem;">
                             <img src="img/crazySmileyFacePic.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                            <h5 class="card-title">Smile</h5>
-                            <p class="card-text">For happy days.</p>
+                                <h5 class="card-title">Smile</h5>
+                                <p class="card-text">For happy days.</p>
+                                <div id="price8">$12.00</div> 
                             </div>
                             <div class="card-body">
                             <a href="#" class="card-link" id="smile">Add to Cart</a>
@@ -357,6 +430,7 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
         <script src="JavaScript/scriptMid_Sub.js" type="text/javascript"></script>
+        <script src="JavaScript/prices.js" type="text/javascript"></script>
     </body>
 
 </html>

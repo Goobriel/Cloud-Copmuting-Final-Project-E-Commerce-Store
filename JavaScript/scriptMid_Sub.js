@@ -19,6 +19,25 @@ $( "button" ).on( "click", function() {
 });
 */
 
+const myModal = document.getElementById('myModal')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
+
+/////////////////////////////////////////////////////// 
+/*
+$(function (){
+let list = 0;
+
+easy FOR LOOP:
+for (let el of ARRAY){
+    list = list + el;
+}
+})
+*/
+///////////////////////////////////////////////////////
 
 /***** Subscribe to Newsletter ********/
 
