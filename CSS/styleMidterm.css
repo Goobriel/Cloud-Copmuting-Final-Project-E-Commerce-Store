@@ -83,7 +83,8 @@ div {
 
 .navbar .dropdown-menu {
     cursor: pointer;
-    float: center;
+    margin: 48%;
+    margin-top: 0%;
 }
 
 
