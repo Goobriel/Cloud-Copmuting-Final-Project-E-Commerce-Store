@@ -2,7 +2,9 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
-    "node.js": "^0.0.1-security"
+    "node.js": "^0.0.1-security",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.3"
   },
   "scripts": {
     "start": "node server.js"

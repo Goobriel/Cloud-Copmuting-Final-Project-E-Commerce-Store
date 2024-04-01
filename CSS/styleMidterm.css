@@ -83,7 +83,7 @@ div {
 
 .navbar .dropdown-menu {
     cursor: pointer;
-    float: middle;
+    float: center;
 }
 
 
@@ -119,6 +119,7 @@ div {
 
 /*****   Heading   *****/
 .Heading {
+    float: center;
     font-family: onyx;
     text-align: center;
     color: #000;
@@ -185,7 +186,22 @@ div {
 
 .contact_Form {
     color: #FFF;
+    float: center;
+}
 
+.contact_Form .col-5{
+    margin-left: 30%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+/*********************************    CREATE ACCOUNT DOC           **************************************/
+
+.accountCreate form{
+    margin-left: 30%;
+    margin-right: 30%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 /*********************************       CART CHECK OUT            **************************************/
