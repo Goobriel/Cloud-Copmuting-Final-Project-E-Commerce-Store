@@ -12,6 +12,7 @@
 
 /*   body   */
 body{
+    margin: 0% auto;
     font-family: Haettenschweile;
     background: #FFF;
 }
@@ -201,6 +202,12 @@ div {
 .accountCreate form{
     margin-left: 30%;
     margin-right: 30%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.reviewform form{
+    margin-left: 35%;
     padding-left: 1%;
     padding-right: 1%;
 }

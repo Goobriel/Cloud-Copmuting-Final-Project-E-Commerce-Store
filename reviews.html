@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+        <link rel="stylesheet" href="CSS/stylereviews.css"></link>
+        <link rel="stylesheet" href="CSS/styleMidterm.css"></link>
+
+        <title>Midterm Shop</title>
+    </head>
+
+    <body>
+ 
+   <!--------------------------------       -Navigation Bar Begins      -------------------------------------------------------->
+
+   <!--Accounts and Sign In: My Accounts, Order Status, Sign In-->
+   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><strong>InsperShirt</strong></a>
+            <a class="" href="index.html"> Home</a>
+            <a class="" href="contact.html">Contact</a>
+            <a class="" href="about.html">About Us</a>
+                <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Accounts and Sign In 
+                </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="createAccount.html">My Accounts</a></li>
+                        <li><a class="dropdown-item" href="#">Order Status</a></li>
+                        <li><a class="dropdown-item" href="#">Sign In</a></li>
+                    </ul>
+            <div>
+                <div class="">
+                    <form class="d-flex" type="search" role="search">
+                        <input class="form-control me-2 split" type="search" placeholder="Search" aria-label="Search">
+                        <button type="submit" class="btn"><i class="bi bi-search split"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <a class=""><button type="button" class="btn" id="cart-icon"><i class="bi bi-cart4"></i></button></a>
+        </div>
+    </nav>
+  
+    <!--------------------------------       -Navigation Bar ENDS      -------------------------------------------------------->
+
+
+    <!--------------------------------       -REVIEWS START HERE       -------------------------------------------------------->
+
+
+        <!------------------- User Reviews ------------------------------>
+     <!--   
+        <ul class="list">
+
+        </ul>
+
+    <div class="rev">
+    <section>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-xl-8 text-center">
+            <h3 class="mb-4">Testimonials</h3>
+            <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+              numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+              quisquam eum porro a pariatur veniam.
+            </p>
+          </div>
+        </div>
+      
+        <div class="row text-center">
+          <div class="col-md-4 mb-5 mb-md-0">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                class="rounded-circle shadow-1-strong" width="150" height="150" />
+            </div>
+            <h5 class="mb-3">Maria Smantha</h5>
+            <h6 class="text-primary mb-3">Web Developer</h6>
+            <p class="px-xl-3">
+              <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic
+              tenetur.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center mb-0">
+             
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-5 mb-md-0">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                class="rounded-circle shadow-1-strong" width="150" height="150" />
+            </div>
+            <h5 class="mb-3">Lisa Cudrow</h5>
+            <h6 class="text-primary mb-3">Graphic Designer</h6>
+            <p class="px-xl-3">
+              <i class="fas fa-quote-left pe-2"></i>Ut enim ad minima veniam, quis nostrum
+              exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center mb-0">
+              
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-0">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                class="rounded-circle shadow-1-strong" width="150" height="150" />
+            </div>
+            <h5 class="mb-3">John Smith</h5>
+            <h6 class="text-primary mb-3">Marketing Specialist</h6>
+            <p class="px-xl-3">
+              <i class="fas fa-quote-left pe-2"></i>At vero eos et accusamus et iusto odio
+              dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center mb-0">
+              
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+            </ul>
+          </div>
+        </div>
+      </section>
+    -->
+
+      <!--------------------      USER RATING SCORE CARD     --------------------->
+
+        <!-- Add icon library -->
+
+<!--
+
+<span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p>4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+</div>
+
+-->
+
+   <!--------------------------------       -REVIEWS END HERE       -------------------------------------------------------->
+
+
+   
+     <!--------------------------------       -Contact Form Begins      -------------------------------------------------------->
+     
+     <H1 class="Heading">Leave a comment! </H1>
+     
+     <p style="text-align: center;">Character limit 300!</p>
+     <div class ="reviewform">
+        <form>
+        <div class="row" class="mb-3">
+            <div class="col-5" id="contact_fill">
+                <label for="reviewname" class="form-label">Full Name: </label>
+                <input type="text" class="form-control" id="reviewname" placeholder="Full name: ">
+        
+                <label for="locate" class="form-label">Location: </label>
+                <input type="text" class="form-control" id="locate" placeholder="Locate:">
+                
+                <label for="response" class="form-label">Review: </label>
+                <textarea class="form-control" id="response" rows="3" placeholder="Enter comment here:"></textarea>
+            </div>
+        </div>
+        <div id="liveAlertPlaceholder"></div>
+        <button type="submit" id="btn-comment" class="btn col-5">Submit Comment.</button>
+    </form>         
+    </div>
+    <ul class="list">
+        <li>hello</li>
+    </ul>
+
+   
+    <!--------------------------------       -Contact Form ENDS      -------------------------------------------------------->
+
+
+
+</div>        
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
+        <script src="JavaScript/reviews.js" type="text/javascript"></script>
+        <script src="JavaScript/script.js" type="text/javascript"></script>
+    </body>
+
+</html>

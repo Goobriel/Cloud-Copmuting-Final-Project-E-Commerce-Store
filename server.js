@@ -38,6 +38,18 @@ app.get("/api/product", (req, res) => {
    })
 });
 
+app.get("/api/reviews", (req, res) => {
+
+    const sql = "SELECT * FROM reviews";
+ 
+    pool.query(sql, (error, results) => {
+ 
+         if (error) throw error
+ 
+         res.status(200).json(results.rows)
+    })
+ });
+
 app.post("/api/users/create", (req, res) => {
 
     console.log(req.body);
@@ -81,6 +93,28 @@ app.post("/api/contactform/create", (req, res) => {
         res.status(200).json(results.row)
     });
 });
+
+app.post("/api/reviews/create", (req, res) => {
+
+    console.log(req.body);
+
+    const reviewname = req.body.reviewname;
+    const locate = req.body.locate;
+    const response = req.body.response;
+
+    // Add here the sql
+
+    const sql = "INSERT INTO reviews (reviewname, locate, response) VALUES ($1,$2,$3)";
+
+    const data = [reviewname, locate, response];
+
+    pool.query(sql, data, (error, results) => {
+        if (error) throw error
+        
+        res.status(200).json(results.row)
+    });
+});
+
 
     //res.status(200).send("ok"); // <---- remove this line
 
