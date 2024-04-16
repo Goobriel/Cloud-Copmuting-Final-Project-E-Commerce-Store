@@ -50,6 +50,16 @@ app.get("/api/reviews", (req, res) => {
     })
  });
 
+app.get("/api/purchased", (req, res) => {
+    const sql = "SELECT * FROM reviews";
+
+    pool.query(sql, (error, results) => {
+        if (error) throw error
+
+        res.status(200).json(results.rows)
+    })
+})
+
 app.post("/api/users/create", (req, res) => {
 
     console.log(req.body);
@@ -116,7 +126,28 @@ app.post("/api/reviews/create", (req, res) => {
 });
 
 
-    //res.status(200).send("ok"); // <---- remove this line
+app.post("/api/purchased/create", (req, res) => {
+
+    console.log(req.body);
+
+    const product = req.body.product;
+    const price = req.body.price;
+    const orderID = req.body.orderID;
+    
+
+    // Add here the sql
+
+    const sql = "INSERT INTO reviews (product, price, orderID) VALUES ($1,$2,$3)";
+
+    const data = [product, price, orderID];
+
+    pool.query(sql, data, (error, results) => {
+        if (error) throw error
+        
+        res.status(200).json(results.row)
+    });
+});
+
 
  
 

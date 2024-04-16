@@ -9,7 +9,7 @@ $(function(){
         let mail = document.getElementById('email').value.trim();
     
         let at = mail.includes("@");
-        let end = mail.includes(".com");
+        let end = mail.includes(".com", ".edu");
         if (username.length === 0 || mail.length === 0 || password.length === 0) {
             alert("Please fill in all fields.");
         } else if (at != true || end != true) {
