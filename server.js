@@ -21,15 +21,22 @@ const pool = new Pool({
 app.get("/prices", function(req, res){
     const prices = {
         newShirts: "$35.00",
-        BestSellers: "$25.00"
+        BestSellers: "$30.00"
     };
     res.json(prices);
 })
 
 app.get("/api/product", (req, res) => {
 
-   const sql = "SELECT * FROM product";
+   const productId = req.query.id;
+   let sql = "SELECT * FROM product";
 
+   // If productId is provided, fetch the product with that ID
+   const params = [];
+   if (productId) {
+       sql += ` WHERE id = $1`;
+       params.push(productId);
+   }
    pool.query(sql, (error, results) => {
 
         if (error) throw error
@@ -59,6 +66,24 @@ app.get("/api/purchased", (req, res) => {
         res.status(200).json(results.rows)
     })
 })
+
+app.post("/api/product/create", (req, res) => {
+    console.log(req.body);
+
+    const id = req.body.id;
+    const productname = req.body.productname;
+    const price = req.body.price;
+
+    const sql = "INSERT INTO product(id, productname, price) VALUES($1,$2,$3)";
+
+    const data = [id, productname, price];
+
+    pool.query(sql, data, (error, results) => {
+        if (error) throw error
+        
+        res.status(200).json(results.row)
+    });
+});
 
 app.post("/api/users/create", (req, res) => {
 
@@ -137,7 +162,7 @@ app.post("/api/purchased/create", (req, res) => {
 
     // Add here the sql
 
-    const sql = "INSERT INTO reviews (product, price, orderID) VALUES ($1,$2,$3)";
+    const sql = "INSERT INTO purchased (product, price, orderID) VALUES ($1,$2,$3)";
 
     const data = [product, price, orderID];
 

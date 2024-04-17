@@ -23,9 +23,9 @@
             <a class="navbar-brand" href="index.html"><strong>InsperShirt</strong></a>
             <a class="" href="index.html"> Home</a>
             <a class="" href="contact.html">Contact</a>
-            <a class="" href="about.html">About Us</a>
-            <a class="" href="snew.html">New Shirts</a>
-            <a class="" href="sbest.html">Best Sellers</a>
+            <!--<a class="" href="about.html">About Us</a>-->
+            <!--<a class="" href="snew.html">New Shirts</a>
+            <a class="" href="sbest.html">Best Sellers</a>-->
             <a class="" href="reviews.html">Reviews</a>
             <a class="" href="moreInfo.html">More Info</a>
 
@@ -37,7 +37,7 @@
                 </a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="createAccount.html">My Accounts</a></li>
-                        <li><a class="dropdown-item" href="#">Order Status</a></li>
+                        <li><a class="dropdown-item" href="https://maps.app.goo.gl/7gNB5JNc4GVkEnwt7">Order Status</a></li>
                         <li><a class="dropdown-item" href="signInPage.html">Sign In</a></li>
                     </ul>
             <div>
@@ -49,33 +49,12 @@
                 </div>
             </div>
             
-            <a class="" href="cartPage.html"><button type="button" class="btn" id="cart-icon"><i class="bi bi-cart4"></i></button></a>
+            <a class="" href="test.html"><button type="button" class="btn" id="cart-icon"><i class="bi bi-cart4"></i></button></a>
         </div>
     </nav>
   
     <!--------------------------------       -Navigation Bar ENDS      -------------------------------------------------------->
 
-
-  <!---------------------------------    Modal for purchasing t-shirts    ----------------------------------------->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">CHECKOUT</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          Are you sure you wish to purchase this item?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary">Purchase Item?</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-------------------------------------   Modal End    ---------------------------------------------->
-  
     <!--------------------------------         -Carousel ENDS          -------------------------------------------------------->
 
 
@@ -113,9 +92,9 @@
     </div>
 
     <!----------------------------------------              -Carousel ENDS           -------------------------------------------------------->
-            
 
     <!----------------------------------------              -Gallery BEGINS           -------------------------------------------------------->
+    <div id="productButtons"></div>
     <div class="gallery">
         <h2 class="Heading">New Arrivals</h2>
             <!----------------------------------------              -Row 1 Begins           -------------------------------------------------------->
@@ -131,7 +110,7 @@
                                 <div id="price1">$12.00</div>    
                             </div>
                             <div class="card-body">
-                            <button class="card-link btn" id="proverbs16-24" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="card-link btn btn-buy-now" id="proverbs16-24" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Buy now!</button>
                             </div>
                         </div>
@@ -146,7 +125,7 @@
                                 <div id="price2">$12.00</div> 
                             </div>
                             <div class="card-body">
-                            <button class="card-link btn" id="hebrews12-1" data-product-id="1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="card-link btn btn-buy-now" id="hebrews12-1" data-product-id="1" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Buy now!</button>
                             </div>
                         </div>
@@ -161,7 +140,7 @@
                                 <div id="price3">$12.00</div> 
                             </div>
                             <div class="card-body">
-                            <button class="card-link btn" id="hebrews12-1" data-product-id="2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="card-link btn btn-buy-now" id="hebrews12-1" data-product-id="2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Buy now!</button>
                         </div>
                         </div>
@@ -176,7 +155,7 @@
                                 <div id="price4">$12.00</div> 
                             </div>
                             <div class="card-body">
-                            <button class="card-link btn" id="jeremiah29-13" data-product-id="3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="card-link btn btn-buy-now " id="jeremiah29-13" data-product-id="3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Buy now!</button>
                             </div>
                         </div>
@@ -201,7 +180,7 @@
                                 <div id="price5">$12.00</div> 
                             </div>
                             <div class="card-body">
-                            <button class="card-link btn" id="panda" data-product-id="4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="card-link btn btn-buy-now" id="panda" data-product-id="4" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Buy now!</button>
                             </div>
                         </div>
@@ -216,7 +195,7 @@
                                 <div id="price6">$12.00</div> 
                             </div>
                             <div class="card-body">
-                            <button class="card-link btn" id="cat" data-product-id="5" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                            <button class="card-link btn btn-buy-now" id="cat" data-product-id="5" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
                                 Buy now!</button>
                             </div>
                         </div>
@@ -231,7 +210,7 @@
                                 <div id="price7">$12.00</div>     
                             </div>
                             <div class="card-body">
-                            <button class="card-link btn" id="samurai" data-product-id="6" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="card-link btn btn-buy-now" id="samurai" data-product-id="6" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Buy now!</button>
                             </div>
                         </div>
@@ -246,7 +225,7 @@
                                 <div id="price8">$12.00</div> 
                             </div>
                             <div class="card-body">
-                            <button class="card-link btn" id="smile" data-product-id="7" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="card-link btn btn-buy-now" id="smile" data-product-id="7" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Buy now!</button>
                             </div>
                         </div>

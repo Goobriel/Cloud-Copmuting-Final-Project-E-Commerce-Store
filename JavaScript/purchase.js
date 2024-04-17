@@ -1,160 +1,105 @@
-// JavaScript to handle fetching data from the server and populating the cart array
-
-// Initialize an empty array to store cart items
-let cart = [];
+// Retrieve cart array from localStorage, or initialize as empty array if not found
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Function to fetch product data from the server
-async function fetchProduct(productId) {
+async function fetchProducts() {
     try {
-        const response = await fetch(`/api/product?id=${productId}`);
+        const response = await fetch("/api/product");
         if (!response.ok) {
             throw new Error('Failed to fetch product data');
         }
-        const productData = await response.json();
-        return productData;
+        const products = await response.json();
+        return products;
     } catch (error) {
         console.error('Error fetching product data:', error);
+        return [];
     }
 }
 
-// Function to handle "buy now" button click event
-async function handleBuyNow(productId) {
-    try {
-        // Fetch product data based on the productId
-        const productData = await fetchProduct(productId);
-        // Add the fetched product data to the cart array
-        cart.push(productData);
-        // Call the function to update the cart display immediately after adding the product
-        updateCartDisplay();
-    } catch (error) {
-        console.error('Error handling buy now:', error);
-    }
+async function generateProductButtons() {
+    const products = await fetchProducts();
+    const productButtonsContainer = document.getElementById("productButtons");
+
+    products.forEach(product => {
+
+        const button = document.createElement("button");
+        button.textContent = `Purchase ${product.productname}`;
+        button.setAttribute("data-product-id", product.id);
+        button.addEventListener("click", () => handleProductButtonClick(product));
+        productButtonsContainer.appendChild(button);
+    });
 }
 
-// Function to update the cart display
-function updateCartDisplay() {
-    const cartList = document.getElementById('cartList');
-    // Clear the existing contents of the cart display
-    cartList.innerHTML = '';
-    // Loop through the cart array and create list items to display each product
+
+
+function handleProductButtonClick(product) {
+
+    // Add the selected product to the cart
+    cart.push(product);
+    // Store the updated cart array in localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Display product details
+    document.getElementById("productId").textContent = `Product ID: ${product.id}`;
+    if (product.productname) {
+        document.getElementById("productName").textContent = `Product Name: ${product.productname}`;
+    }
+    document.getElementById("productPrice").textContent = `Price: ${product.price}`;
+    document.getElementById("productOther").textContent = `Other data: ${JSON.stringify(product)}`;
+
+    // Update the cart display
+    displayCart();
+}
+
+
+function displayCart() {
+    const cartList = document.getElementById("ShoppingCart");
+    cartList.innerHTML = ""; // Clear previous contents
+
+    console.log(cart);
     cart.forEach(product => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${product.name} - $${product.price}`;
+        console.log(product);
+        const listItem = document.createElement("li");
+        listItem.textContent = `Product Name: ${product.productname} - Price: ${product.price}`;
         cartList.appendChild(listItem);
     });
 }
 
-// Event listener for "buy now" buttons
-document.addEventListener('DOMContentLoaded', () => {
-    const buyNowButtons = document.querySelectorAll('.card-link.btn');
-    buyNowButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const productId = button.dataset.productId;
-            handleBuyNow(productId);
-        });
-    });
-});
-
-
-// Event listener for "buy now" buttons
-document.addEventListener('DOMContentLoaded', () => {
-    // Your implementation goes here
-});
-
-
-function loadCart(){
-
-        $("#proverbs16-24").click(function() {
-            let productId = $(this).data("product-id");
-            $.get("/api/product?id=" + productId, function(response) {
-                cart.push(response.price);
-            });
-        });
+function emptyCart(){
     
-        $("#hebrews12-1").click(function() {
-            let productId = $(this).data("product-id");
-            $.get("/api/product?id=" + productId, function(response) {
-                cart.push(response.price);
-            });
-        });
-    $("#jeremiah29-13").click(function(){
-        let productId = $(this).data("product-id");
-        $.get("/api/product?id=" + productId, function(response) {
-            cart.push(response.price);
-        });
-    })
-    $("#panda").click(function(){
-        let productId = $(this).data("product-id");
-        $.get("/api/product?id=" + productId, function(response) {
-            cart.push(response.price);
-        });
-    })
-    $("#cat").click(function(){
-        let productId = $(this).data("product-id");
-        $.get("/api/product?id=" + productId, function(response) {
-            cart.push(response.price);
-        });
-    })
-    $("#samurai").click(function(){
-        let productId = $(this).data("product-id");
-        $.get("/api/product?id=" + productId, function(response) {
-            cart.push(response.price);
-        });
-    })
-    $("#smile").click(function(){
-        let productId = $(this).data("product-id");
-        $.get("/api/product?id=" + productId, function(response) {
-            cart.push(response.price);
-        });
-    })
-
+    cart = [];
+    // Store the updated cart array in localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 
+purchase.addEventListener('click', () => {
+    // Iterate over each item in the cart array
+    cart.forEach(item => {
+        // Construct the data object for the current item
+        const data = {
+            product: item.productname, // Assuming product name is stored in productname property
+            price: item.price,
+            orderid: item.orderid // Assuming order ID is stored in orderid property
+        };
 
-
-
-$(document).ready(function () {
-    loadCart();
-
-    function displayCart() {
-        $("#cartList").empty();
-    
-        // Add each item from cart array to the list
-        cart.forEach(function(item) {
-            $("#cartList").append("<li>" + item.productname + " - $" + item.price + "</li>");
+        // Send a POST request for the current item
+        $.post("/api/purchased/create", data, function (response){
+            console.log("Purchased:", response);
         });
-    }
-});
-
-        // $.post( "/api/purchased/create", data, function( data ) {
-        //     console.log("Purchase Succsseful!");
-        // });
-        // return false;
-
-
-
-
-/*function loadPurchase(){
-    $(".list").empty();
-
-    $.get("/api/reviews", function (response) {
-
-        for (const reviews of response) {
-            $(".list").append("<li>" + reviews.reviewname + " from " + reviews.locate + " says: " + "<p>" + reviews.response + "</p>" + "</li>")
-        }
+        alert("Purchase successful! Thank you for ordering in bulk!")
     });
 
-}*/
+    // Clear the cart after all items have been processed
+    emptyCart();   
+});
 
 
-/*
-    var item1 = $("#proverbs16-24").val();
-    var item2 = $("#hebrews12-1").val();
-    var item3 = $("#hebrews12-1").val();
-    var item4 = $("#jeremiah29-13").val();
-    var item5 = $("#panda").val();
-    var item6 = $("#cat").val();
-    var item7 = $("#samurai").val();
-    var item8 = $("#smile").val();
-*/
+// Add event listener to the toggle button
+toggle.addEventListener('click', () => {
+    ShoppingCart.hidden = !ShoppingCart.hidden;
+    displayCart();
+});
+
+// Generate product buttons when the page loads
+window.addEventListener("DOMContentLoaded", generateProductButtons);

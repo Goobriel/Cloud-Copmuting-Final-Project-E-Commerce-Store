@@ -2,6 +2,13 @@
 
 $(function(){
 
+    $(".btn-buy-now").click(function(){
+
+        const id = $(this).data("product-id");
+
+        alert("Purchase successful! Item number " + id + " has been ordered!")
+    });
+
 /***** Subscribe to Newsletter ********/
 
 document.getElementById('btn-subscribe').addEventListener('click', function() {
